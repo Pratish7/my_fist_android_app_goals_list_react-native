@@ -4,8 +4,8 @@ import { StyleSheet, TextInput, View, Button } from 'react-native'
 export default function App() {
   return (
     <View style={{padding: 30}}>
-      <View style={{flexDirection: 'row'}}>
-        <TextInput placeholder="Course Goal" style={{borderColor: 'black', borderWidth: 1}} />
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+        <TextInput placeholder="Course Goal" style={{borderColor: 'black', borderWidth: 1, width: '80%'}} />
         <Button title='ADD' />
       </View>
       <View>

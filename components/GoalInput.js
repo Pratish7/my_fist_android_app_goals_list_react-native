@@ -2,9 +2,16 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Modal } from 'react-native';
 
 const GoalInput = props => {
+  
   const [enteredGoal, setEneterdGoal] = useState('');
+  
   const goalInputHandeler = (enteredText) => {
     setEneterdGoal(enteredText);
+  };
+
+  const addGoalHandeler =() => {
+    props.onAddGoal(enteredGoal);
+    setEneterdGoal('');
   };
 
   return (
@@ -16,7 +23,7 @@ const GoalInput = props => {
           onChangeText={goalInputHandeler}
           value={enteredGoal}
         />
-        <Button title='ADD' onPress={props.onAddGoal.bind(this, enteredGoal)} />
+        <Button title='ADD' onPress={addGoalHandeler} />
       </View>
     </Modal>
   );

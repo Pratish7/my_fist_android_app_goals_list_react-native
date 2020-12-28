@@ -17,7 +17,7 @@ export default function App() {
       <FlatList
         keyExtractor={(item, index) => item.ib}
         data={courseGoals}
-        renderItem={ itemData => <GoalItem title={itemData.item.value} />}
+        renderItem={ itemData => <GoalItem onPress={() => console.log('works')} title={itemData.item.value} />}
       />
         
     </View>
